@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM debian:9
 
 ENV BITCOIN_VERSION=0.16.2
 ENV BITCOIN_DATA=/home/bitcoin/.bitcoin

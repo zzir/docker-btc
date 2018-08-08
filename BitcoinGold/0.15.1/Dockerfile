@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM debian:9
 
 ENV BITCOIN_GOLD_VERSION=0.15.1
 ENV BITCOIN_GOLD_DATA=/home/bitcoingold/.bitcoingold
