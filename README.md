@@ -46,11 +46,13 @@ docker exec --user bitcoin btc-0-16-2 bitcoin-cli -regtest getmininginfo
 ## Q & A
 
 Q: can not connect github.com or speed slow.
-
 A: add http proxy.
 ```
 docker build --build-arg HTTP_PROXY=http://1.2.3.4:5678 -t btc:v0.16.2 .
 ```
+
+Q: can not running.
+A: do not write `deamon=1` in `bitcoin.conf` file.
 
 
 ## Reference
