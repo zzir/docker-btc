@@ -49,7 +49,7 @@ Q: can not connect github.com or speed slow.
 
 A: add http proxy.
 ```
-docker build -t btc:v0.16.2 --build-arg=[HTTP_PROXY=http://1.2.3.4:5678] .
+docker build --build-arg HTTP_PROXY=http://1.2.3.4:5678 -t btc:v0.16.2 .
 ```
 
 
