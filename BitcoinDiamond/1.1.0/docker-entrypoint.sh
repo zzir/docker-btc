@@ -10,7 +10,7 @@ fi
 if [ $(echo "$1" | cut -c1) = "-" ] || [ "$1" = "bitcoindiamondd" ]; then
   mkdir -p "$BITCOIN_DIAMOND_DATA"
   chmod 700 "$BITCOIN_DIAMOND_DATA"
-  chown -R bitcoin "$BITCOIN_DIAMOND_DATA"
+  chown -R bitcoindiamond "$BITCOIN_DIAMOND_DATA"
 
   echo "$0: setting data directory to $BITCOIN_DIAMOND_DATA"
 
