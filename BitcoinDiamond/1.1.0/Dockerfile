@@ -39,7 +39,7 @@ RUN curl -SLO https://github.com/eveybcd/BitcoinDiamond/archive/v${BITCOIN_DIAMO
     && rm -rf /tmp/* \
     && chmod +x /entrypoint.sh
 
-VOLUME ["/home/bitcoindiamond/.bitcoindiamond"]
+#VOLUME ["/home/bitcoindiamond/.bitcoindiamond"]
 
 EXPOSE 7116 7117 17116 17117 18443 18444
 

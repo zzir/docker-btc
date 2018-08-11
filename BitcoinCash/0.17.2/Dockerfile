@@ -39,7 +39,7 @@ RUN curl -SLO https://github.com/Bitcoin-ABC/bitcoin-abc/archive/v${BITCOIN_VERS
     && rm -rf /tmp/* \
     && chmod +x /entrypoint.sh
 
-VOLUME ["/home/bitcoin/.bitcoin"]
+#VOLUME ["/home/bitcoin/.bitcoin"]
 
 EXPOSE 8332 8333 18332 18333 18443 18444
 

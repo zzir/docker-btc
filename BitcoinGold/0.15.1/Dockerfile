@@ -36,7 +36,7 @@ RUN curl -SLO https://github.com/BTCGPU/BTCGPU/releases/download/v${BITCOIN_GOLD
     && rm *.tar.gz \
     && chmod +x /entrypoint.sh
 
-VOLUME ["/home/bitcoingold/.bitcoingold"]
+#VOLUME ["/home/bitcoingold/.bitcoingold"]
 
 EXPOSE 9332 9333 19332 19333 19444
 

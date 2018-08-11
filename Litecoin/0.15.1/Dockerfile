@@ -34,7 +34,7 @@ RUN curl -O https://download.litecoin.org/litecoin-${LITECOIN_VERSION}/linux/lit
     && rm *.tar.gz \
     && chmod +x /entrypoint.sh
 
-VOLUME ["/home/litecoin/.litecoin"]
+#VOLUME ["/home/litecoin/.litecoin"]
 
 EXPOSE 9332 9333 19332 19333 19444
 
