@@ -1,62 +1,25 @@
-# CoinDockerfile
+# docker-btc
 
-## Build
-```bash
-# clone project
-git clone https://github.com/zzir/CoinsDockerfile
+## Get Docker Images
+```
+docker pull zzir/btc:latest
+``` 
 
-# build to images
-docker build -t btc:v0.16.2 CoinsDockerfile/Bitcoin/0.16.2/
+or build yourself
+
+```
+docker build -t btc:latest .
 ```
 
-## Run & Exec
+## Run Mainnet
 
-```bash
-# run
-docker run -d --name btc-0-16-2 -v /tmp/btc:/home/bitcoin/.bitcoin/ btc:v0.16.2 -regtest=1
-
-# exec
-docker exec --user bitcoin btc-0-16-2 bitcoin-cli -regtest getmininginfo
+```
+docker run --name btc-main -d -p 8332:8332 -p 8333:8333 zzir/btc
 ```
 
-## Volume Path
+## Run Regtest
 
-**Bitcoin**
 ```
-/home/bitcoin/.bitcoin
+docker run -d --name btc-dev btc bitcoind -regtest
+docker exec btc-dev bitcoin-cli -regtest getblockcount
 ```
-**BitcoinCash**
-```
-/home/bitcoin/.bitcoin
-```
-**BitcoinDiamond**
-```
-/home/bitcoindiamond/.bitcoindiamond
-```
-**BitcoinGold**
-```
-/home/bitcoingold/.bitcoingold
-```
-**Litecoin**
-```
-/home/litecoin/.litecoin
-```
-
-
-## Q & A
-
-Q: can not connect github.com or speed slow.    
-A: add http proxy.
-```
-docker build --build-arg HTTP_PROXY=http://1.2.3.4:5678 -t btc:v0.16.2 .
-```
-
-Q: can not running.    
-A: do not write `deamon=1` in `bitcoin.conf` file.
-
-
-## Reference
-
- - https://github.com/ruimarinho/docker-bitcoin-core
- - https://github.com/uphold/docker-litecoin-core
- - https://github.com/uphold/docker-bitcoin-gold
