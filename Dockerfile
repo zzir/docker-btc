@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-ENV BITCOIN_VERSION=0.20.1
-ENV GLIBC_VERSION=2.29-r0
+ENV BITCOIN_VERSION=0.21.1
+ENV GLIBC_VERSION=2.33-r0
 ENV BITCOIN_DATA=/home/bitcoin/.bitcoin
 
 RUN adduser -D -u 1000 bitcoin \
